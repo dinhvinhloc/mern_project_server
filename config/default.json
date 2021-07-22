@@ -1,0 +1,4 @@
+{
+    "mongoDBConnection" : "mongodb+srv://prabhjot:1234@cluster.1284i.mongodb.net/mernapp?retryWrites=true&w=majority",
+    "jwtsecret": "mysecret"
+}
