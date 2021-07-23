@@ -1,4 +1,5 @@
 {
     "mongoDBConnection" : "mongodb+srv://prabhjot:1234@cluster.1284i.mongodb.net/mernapp?retryWrites=true&w=majority",
+    "mongoDBConnection_locdinh" : "mongodb+srv://locdinh:LxLDW51JVZFkGxeK@cluster0.a64gb.mongodb.net/mern_project?retryWrites=true&w=majority",
     "jwtsecret": "mysecret"
 }
