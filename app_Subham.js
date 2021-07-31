@@ -1,6 +1,7 @@
 //server 
 const express = require('express');
 const educationRoutesDb = require('./routes/api/educationRoutesDB');
+const experienceRoutesDb = require('./routes/api/experienceRoutesDB')
 const userRoutes = require('./routes/api/userRoutes');
 const authRoutes = require('./routes/api/authRoutes');
 const connectDB = require('./config/connectDB_Subham');
@@ -13,6 +14,7 @@ connectDB();
 app.use(express.json());
 
 app.use('/api/educations', educationRoutesDb);
+app.use('/api/experiences', experienceRoutesDb);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
