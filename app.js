@@ -1,10 +1,18 @@
 //server 
 const express = require('express');
-const skillRoutesDb = require('./routes/api/skillRoutesDb');
-const aboutMeRoutesDb = require('./routes/api/aboutMeRoutesDB');
 const userRoutes = require('./routes/api/userRoutes');
 const authRoutes = require('./routes/api/authRoutes');
 const connectDB = require('./config/connectDB');
+const skillRoutesDb = require('./routes/api/skillRoutesDb');
+const aboutMeRoutesDb = require('./routes/api/aboutMeRoutesDB');
+const projectRoutesDb = require('./routes/api/projectRoutesDb');
+const languageRoutesDb = require('./routes/api/languageRoutesDb');
+const educationRoutesDb = require('./routes/api/educationRoutesDB');
+const experienceRoutesDb = require('./routes/api/experienceRoutesDB')
+
+
+const resumeRoutesDb = require('./routes/api/resumeRoutesDb');
+
 
 const app = express();
 
@@ -15,6 +23,11 @@ app.use(express.json());
 
 app.use('/api/skills', skillRoutesDb);
 app.use('/api/aboutme', aboutMeRoutesDb);
+app.use('/api/projects', projectRoutesDb);
+app.use('/api/languages', languageRoutesDb);
+app.use('/api/educations', educationRoutesDb);
+app.use('/api/experiences', experienceRoutesDb);
+app.use('/api/resumes', resumeRoutesDb);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 
