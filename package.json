@@ -4,7 +4,7 @@
   "description": "- [x] Create a restful API for the MongoDB collection  projects ( title, description, category, date, user) to list, detail,  create, update, and delete (12)\r Authenticate with JWT to make sure only logged in user able to create, update and delete their data (10)\r Validate the input data (3)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
