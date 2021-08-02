@@ -41,7 +41,7 @@ router.post(
   auth,
   [
     check('name', 'Name is required').not().isEmpty(),
-    phone('type', 'Type is required').not().isEmpty(),
+    check('type', 'Type is required').not().isEmpty(),
   ],
   async (req, res) => {
     try {

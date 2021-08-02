@@ -41,7 +41,7 @@ router.post(
   auth,
   [
     check('email', 'Valid email is required').isEmail(),
-    phone('phone', 'Phone should be longer than 10 dgits').isLength({
+    check('phone', 'Phone should be longer than 10 dgits').isLength({
       min: 10,
     }),
   ],
