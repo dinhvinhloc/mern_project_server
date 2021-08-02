@@ -7,7 +7,7 @@
 ## Tasks: Create all the required rest API with authentication
 
 -  [x] Prabhjot Sidhu: Skill, About Me
--  [x] Loc Dinh: Project, Language, Resume
+-  [x] Loc Dinh: Project, Language, Resume, Heroku deploy for backen (sample: https://mern-project-quad-squad-server.herokuapp.com/api/languages/)
 -  [x] Vlad Kostur: Award, Contact, Hobby
 -  [x] Subham Tandel: Education, Experience
 
