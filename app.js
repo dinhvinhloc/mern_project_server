@@ -14,7 +14,7 @@ const contactRoutesDb = require('./routes/api/contactRoutesDB');
 const hobbyRoutesDb = require('./routes/api/hobbyRoutesDB');
 
 
-const resumeRoutesDb = require('./routes/api/resumeRoutesDb');
+const resumeRoutesDb = require('./routes/api/resumeRoutesDB');
 
 
 const app = express();
