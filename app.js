@@ -1,4 +1,4 @@
-//server 
+//server
 const express = require('express');
 const userRoutes = require('./routes/api/userRoutes');
 const authRoutes = require('./routes/api/authRoutes');
@@ -8,7 +8,10 @@ const aboutMeRoutesDb = require('./routes/api/aboutMeRoutesDB');
 const projectRoutesDb = require('./routes/api/projectRoutesDb');
 const languageRoutesDb = require('./routes/api/languageRoutesDb');
 const educationRoutesDb = require('./routes/api/educationRoutesDB');
-const experienceRoutesDb = require('./routes/api/experienceRoutesDB')
+const experienceRoutesDb = require('./routes/api/experienceRoutesDB');
+const awardRoutesDb = require('./routes/api/awardRoutesDB');
+const contactRoutesDb = require('./routes/api/contactRoutesDB');
+const hobbyRoutesDb = require('./routes/api/hobbyRoutesDB');
 
 
 const resumeRoutesDb = require('./routes/api/resumeRoutesDb');
@@ -21,6 +24,9 @@ connectDB();
 //set a middleware to parse data
 app.use(express.json());
 
+app.use('/api/hobbies', hobbyRoutesDb);
+app.use('/api/contacts', contactRoutesDb);
+app.use('/api/awards', awardRoutesDb);
 app.use('/api/skills', skillRoutesDb);
 app.use('/api/aboutme', aboutMeRoutesDb);
 app.use('/api/projects', projectRoutesDb);
