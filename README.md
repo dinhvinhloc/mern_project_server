@@ -8,6 +8,7 @@
 
 -  [x] Prabhjot Sidhu: Skill, About Me
 -  [x] Loc Dinh: Project, Language, Resume, Heroku deploy for backen (sample: https://mern-project-quad-squad-server.herokuapp.com/api/languages/)
+-  [ ] Loc Dinh: Examples of endpoints use
 -  [x] Vlad Kostur: Award, Contact, Hobby
 -  [x] Subham Tandel: Education, Experience
 
