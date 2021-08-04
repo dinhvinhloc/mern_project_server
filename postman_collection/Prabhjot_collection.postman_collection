@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "b90c2ee7-f0a3-43ad-9420-2a7bb5f868f5",
+		"name": "Prabhjot_collection_server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prabhjot_1\",\r\n    \"email\": \"pavisidhu1@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add skill",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwMDg2NzBmNzI3OTEyNjEwZWQ4ZTFhIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI3NDI0MzY4LCJleHAiOjE2Mjc0NjAzNjh9.nKMqi5FX7tMeimlDkUNjO3dKqmjEEJDYCdibOgFdnE8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"React\",\r\n    \"proflevel\": 5,\r\n    \"description\": \"Web development\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/skills",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add aboutme",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwMDg2NzBmNzI3OTEyNjEwZWQ4ZTFhIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI3NDI0MzY4LCJleHAiOjE2Mjc0NjAzNjh9.nKMqi5FX7tMeimlDkUNjO3dKqmjEEJDYCdibOgFdnE8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"info\": \"Donec eu condimentum odio, a lobortis est. Aliquam ac sapien sed lorem malesuada scelerisque. Morbi posuere nisi sed tortor malesuada porta. Ut ante dui, facilisis vehicula ante ut, bibendum malesuada ex. Donec nec ex ex. Aliquam bibendum cursus neque, in lacinia lorem tristique non. Sed euismod aliquet blandit. \"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/aboutme",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"aboutme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update aboutme",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwMDg2NzBmNzI3OTEyNjEwZWQ4ZTFhIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI3NDI0MzY4LCJleHAiOjE2Mjc0NjAzNjh9.nKMqi5FX7tMeimlDkUNjO3dKqmjEEJDYCdibOgFdnE8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"61008709f727912610ed8e1c\",\r\n    \"info\": \"abcd non magna ultrices, gravida augue id, gravida libero. Sed volutpat non nulla eget tempus. Nulla orci neque, pulvinar sed molestie vitae, tincidunt ac mauris. Fusce eleifend lorem libero, id vestibulum dolor hendrerit eget. Praesent ornare mattis varius. Sed in nibh id mauris ullamcorper varius. In fermentum venenatis tortor in sollicitudin. Vivamus nec ultricies orci, at aliquam est. Aliquam erat volutpat. Fusce vitae maximus leo, a dignissim nisl. Aenean lacinia tellus vel magna commodo, id volutpat leo lobortis. Nam sit amet nunc in augue aliquet iaculis a vitae sem. Vivamus posuere et lorem in feugiat.\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/aboutme",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"aboutme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update skill",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwMDg2NzBmNzI3OTEyNjEwZWQ4ZTFhIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI3NDI0MzY4LCJleHAiOjE2Mjc0NjAzNjh9.nKMqi5FX7tMeimlDkUNjO3dKqmjEEJDYCdibOgFdnE8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"61008709f727912610ed8e1c\",\r\n     \"name\": \"React\",\r\n    \"proflevel\": 7,\r\n    \"description\": \"Web development 2\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/skills",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete skill",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBmOGNiZGNmNGU2YTgyYWZjMThhZGMwIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI2OTE3ODUyLCJleHAiOjE2MjY5NTM4NTJ9.rr_zAkXzNjVqNNY5ThRBY2KblIrnkP77U3wW2G0gw6o",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"60f8cde7f4e6a82afc18adc5\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/skills",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete aboutme",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBmOGNiZGNmNGU2YTgyYWZjMThhZGMwIiwibmFtZSI6IlByYWJoam90XzEifSwiaWF0IjoxNjI2OTE3ODUyLCJleHAiOjE2MjY5NTM4NTJ9.rr_zAkXzNjVqNNY5ThRBY2KblIrnkP77U3wW2G0gw6o",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"61008709f727912610ed8e1c\"\r\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/aboutme",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"aboutme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all skills",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/skills",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get aboutme by id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/aboutme/61008709f727912610ed8e1c",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"aboutme",
+						"61008709f727912610ed8e1c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get skill by id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/skills/61008709f727912610ed8e1c",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"skills",
+						"61008709f727912610ed8e1c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all aboutme",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/aboutme",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"aboutme"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

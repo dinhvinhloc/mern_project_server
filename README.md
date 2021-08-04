@@ -6,8 +6,17 @@
 
 ## Tasks: Create all the required rest API with authentication
 
--  [x] Prabhjot Sidhu: Skill, About Me
--  [x] Loc Dinh: Project, Language, Resume, Heroku deploy for backen (sample: https://mern-project-quad-squad-server.herokuapp.com/api/languages/)
+-  [x] Prabhjot Sidhu: 
+    - Skills 
+        pages : Skill.js, skillRoutesDB.js
+        endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/skills/ 
+                    <!-- CRUD examples can be found under postman_collection folder -->
+                    
+    - About Me
+        pages : Aboutme.js, aboutMeRoutesDB.js 
+        endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/aboutme/
+
+-  [x] Loc Dinh: Project, Language, Resume, Heroku deploy for backend (sample: https://mern-project-quad-squad-server.herokuapp.com/api/languages/)
 -  [ ] Loc Dinh: Examples of endpoints use
 -  [x] Vlad Kostur: Award, Contact, Hobby
 -  [x] Subham Tandel: Education, Experience
