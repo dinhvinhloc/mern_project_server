@@ -1,5 +1,6 @@
 //server
 const express = require('express');
+const cors = require('cors');
 const userRoutes = require('./routes/api/userRoutes');
 const authRoutes = require('./routes/api/authRoutes');
 const connectDB = require('./config/connectDB');
@@ -23,6 +24,7 @@ const app = express();
 connectDB();
 //set a middleware to parse data
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/hobbies', hobbyRoutesDb);
 app.use('/api/contacts', contactRoutesDb);
