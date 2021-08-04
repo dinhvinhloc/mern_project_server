@@ -24,7 +24,7 @@ const app = express();
 connectDB();
 //set a middleware to parse data
 app.use(express.json());
-app.use(cors());
+app.use(cors()); 
 
 app.use('/api/hobbies', hobbyRoutesDb);
 app.use('/api/contacts', contactRoutesDb);
