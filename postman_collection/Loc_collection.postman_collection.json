@@ -23,15 +23,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"loc\",\n    \"email\": \"loc@mail.com\",\n    \"password\":\"12345678\"\n}"
+					"raw": "{\n    \"name\": \"Loc Dinh\",\n    \"email\": \"loc.dinh@mail.com\",\n    \"password\":\"12345678\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users/",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/users/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"users",
@@ -59,15 +60,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"dvloc@mail.com\",\n    \"password\":\"1234\"\n}"
+					"raw": "{\n    \"email\": \"loc.dinh@mail.com\",\n    \"password\":\"12345678\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/auth/",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/auth/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"auth",
@@ -94,21 +96,64 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBmNzEyYjNjZTA0YzQ1MTY4ZmYwYTQ3In0sImlhdCI6MTYyNjgwNTQ5NiwiZXhwIjoxNjI2ODQxNDk2fQ.0jcY-awvT_NrC1SkIDFFAM232cpJtSxBORxK565vKkY",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4In0sImlhdCI6MTYyODE0MTkxMywiZXhwIjoxNjI4MTc3OTEzfQ.CQf5nBb09qqPgkXQQOLL92qE41a53GovdbfKGtYLBPM",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"MERN\",\n    \"description\": \"Group Project for MERN Stack course\",\n    \"category\":\"Programming\"\n}"
+					"raw": "{\n    \"name\": \"Enterprise Application Modeling\",\n    \"description\": \"Group Project for Enterprise Application Modeling course\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/projects/",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
+					"path": [
+						"api",
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projects Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4In0sImlhdCI6MTYyODE0MTkxMywiZXhwIjoxNjI4MTc3OTEzfQ.CQf5nBb09qqPgkXQQOLL92qE41a53GovdbfKGtYLBPM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"610b7a120768f900153841db\",\n    \"name\": \"Enterprise Application Modeling - Update\",\n    \"description\": \"Group Project for Enterprise Application Modeling course - Update\"\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
 					"path": [
 						"api",
 						"projects",
@@ -124,159 +169,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/projects/60f714e295a59459a6ed8ae4",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"projects",
-						"60f714e295a59459a6ed8ae4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Project Update",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwNjI1NzFlMzc5NjAwMjZhN2I1NDU0IiwibmFtZSI6ImxvYyJ9LCJpYXQiOjE2Mjc3OTI3NTMsImV4cCI6MTYyNzgyODc1M30.63ATr3nd8INXlQuUibzMZcg2yxFqMlObNmadDEmFht4",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\":\"610625f3aa414107e42f4bb0\",\n    \"language\": \"JAVA\",\n    \"level\": \"In the sky\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/languages/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"languages",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Langues Get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5000/api/projects/60f714e295a59459a6ed8ae4",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"projects",
-						"60f714e295a59459a6ed8ae4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Language Create",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwNjI1NzFlMzc5NjAwMjZhN2I1NDU0IiwibmFtZSI6ImxvYyJ9LCJpYXQiOjE2Mjc3OTI3NTMsImV4cCI6MTYyNzgyODc1M30.63ATr3nd8INXlQuUibzMZcg2yxFqMlObNmadDEmFht4",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"language\": \"English\",\n    \"level\":\"CLB9\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/resumes/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"resumes",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Language Update",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-type": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwNjI1NzFlMzc5NjAwMjZhN2I1NDU0IiwibmFtZSI6ImxvYyJ9LCJpYXQiOjE2Mjc3OTI3NTMsImV4cCI6MTYyNzgyODc1M30.63ATr3nd8INXlQuUibzMZcg2yxFqMlObNmadDEmFht4",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\":\"610625f3aa414107e42f4bb0\",\n    \"language\": \"JAVA\",\n    \"level\": \"In the sky\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/languages/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"languages",
 						""
 					]
 				}
@@ -300,24 +202,25 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwNjI1NzFlMzc5NjAwMjZhN2I1NDU0IiwibmFtZSI6ImxvYyJ9LCJpYXQiOjE2Mjc3OTI3NTMsImV4cCI6MTYyNzgyODc1M30.63ATr3nd8INXlQuUibzMZcg2yxFqMlObNmadDEmFht4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4In0sImlhdCI6MTYyODE0MTkxMywiZXhwIjoxNjI4MTc3OTEzfQ.CQf5nBb09qqPgkXQQOLL92qE41a53GovdbfKGtYLBPM",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"61062680aa414107e42f4bb2\"\n}"
+					"raw": "{\n    \"id\": \"610b7a120768f900153841db\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/languages/",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
-						"languages",
+						"projects",
 						""
 					]
 				}
@@ -325,7 +228,7 @@
 			"response": []
 		},
 		{
-			"name": "Resume Create",
+			"name": "Language Create",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"content-type": true
@@ -341,13 +244,225 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwNjI1NzFlMzc5NjAwMjZhN2I1NDU0IiwibmFtZSI6ImxvYyJ9LCJpYXQiOjE2Mjc3OTI3NTMsImV4cCI6MTYyNzgyODc1M30.63ATr3nd8INXlQuUibzMZcg2yxFqMlObNmadDEmFht4",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"user\": \"61062571e37960026a7b5454\",\n    \"title\":\"Resume 1\",\n    \"languages\":[\n        {\n            \"_id\":\"610625f3aa414107e42f4bb0\"\n        }\n    ]\n}"
+					"raw": "{\n    \"language\": \"English\",\n    \"level\":\"CLB9\"\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/languages/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"languages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Language Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"610b7f920768f900153841e6\",\n    \"language\": \"English\",\n    \"level\":\"CLB8\"\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/languages/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"languages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Language Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"610b7f920768f900153841e6\"\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/languages/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"languages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Languages Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/languages/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"languages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resumes Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"610b78440768f900153841d8\",\n    \"title\":\"Resume 2\",\n    \"description\":\"Resume 2 description\",\n    \"languages\":[\n        {\n            \"_id\":\"610625f3aa414107e42f4bb0\"\n        }\n    ],\n    \"projects\":[\n        {\n            \"_id\":\"610b7ac20768f900153841dd\"\n        }\n    ],\n    \"skills\":[\n        {\n            \"_id\":\"61008827f727912610ed8e20\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/resumes/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"resumes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resumes Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/resumes/",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"resumes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resumes Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"610b81d40768f900153841ee\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:5000/api/resumes/",
