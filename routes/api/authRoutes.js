@@ -42,9 +42,12 @@ router.post(
       const payload = {
         user: {
           id: user.id,
-          name: req.body.name,
+          name: user.email,
         },
       };
+
+      const userEmail = user.email;
+      const userId = user.id
 
       jwt.sign(
         payload,
@@ -52,7 +55,7 @@ router.post(
         { expiresIn: 36000 },
         (err, token) => {
           if (err) throw err;
-          res.json({ token });
+          res.json({ userId, userEmail, token });
         }
       );
     } catch (err) {

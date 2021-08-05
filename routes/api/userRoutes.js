@@ -44,13 +44,16 @@ router.post(
         },
       };
 
+      const userEmail = newUser.email;
+      const userId = newUser.id
+
       jwt.sign(
         payload,
         config.get('jwtsecret'),
         { expiresIn: 36000 },
         (err, token) => {
           if (err) throw err;
-          res.json({ token });
+          res.json({ userId, userEmail, token });
         }
       );
     } catch (err) {
