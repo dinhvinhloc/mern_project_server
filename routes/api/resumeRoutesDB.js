@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 //access public
 router.get('/:id', async (req, res) => {
   try {
-    const resume = await resume.findById(req.params.id);
+    const resume = await Resume.findById(req.params.id);
     if (!resume) {
       return res.status(404).send('Resume not found');
     }
@@ -77,7 +77,7 @@ router.post(
 router.delete('/', auth, async (req, res) => {
   try {
     // find the element
-    const Resume = await Resume.findOneAndRemove({
+    const resume = await Resume.findOneAndRemove({
       user: req.user.id,
       _id: req.body.id,
     });
