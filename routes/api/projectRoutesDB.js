@@ -18,6 +18,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+//route Get api/projects/user/:userId
+//desc Get all projects by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const projectDB = await Project.find({
+      user: req.params.userId
+    });
+
+    if (!projectDB) {
+      return res.status(404).send('Project not found');
+    }
+    res.send(projectDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
+
 //route Get api/projects/:id
 //desc Get  projects by id
 //access public

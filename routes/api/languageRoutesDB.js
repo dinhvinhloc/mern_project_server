@@ -18,6 +18,26 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/languages/user/:userId
+//desc Get all languages by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const languageDB = await Language.find({
+      user: req.params.userId
+    });
+
+    if (!languageDB) {
+      return res.status(404).send('Language not found');
+    }
+    res.send(languageDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
+
 //route Get api/languages/:id
 //desc Get  languages by id
 //access public
