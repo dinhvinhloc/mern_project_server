@@ -23,7 +23,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Loc Dinh\",\n    \"email\": \"loc.dinh@mail.com\",\n    \"password\":\"12345678\"\n}"
+					"raw": "{\n    \"name\": \"Vinh Loc Dinh\",\n    \"email\": \"dvloc@mail.com\",\n    \"password\":\"12345678\"\n}"
 				},
 				"url": {
 					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/users/",
@@ -96,13 +96,13 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4In0sImlhdCI6MTYyODE0MTkxMywiZXhwIjoxNjI4MTc3OTEzfQ.CQf5nBb09qqPgkXQQOLL92qE41a53GovdbfKGtYLBPM",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwY2FlNmE4YzIzNGYwMDE1MTZiMWZmIiwibmFtZSI6InRlc3RAdGVzdC5jb20ifSwiaWF0IjoxNjI4MjIyODQ0LCJleHAiOjE2MjgyNTg4NDR9.MHFdGaPTk9qSJRSY6UnskILCjFSSmK98XsoDbTyeW2g",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Enterprise Application Modeling\",\n    \"description\": \"Group Project for Enterprise Application Modeling course\"\n}"
+					"raw": "{\n    \"name\": \"J2EE Business Component 1\",\n    \"description\": \"Group Project for J2EE Business Component course 1\"\n}"
 				},
 				"url": {
 					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/",
@@ -244,13 +244,13 @@
 					},
 					{
 						"key": "x-auth-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6ImxvYy5kaW5oQG1haWwuY29tIn0sImlhdCI6MTYyODIyNDQxNywiZXhwIjoxNjI4MjYwNDE3fQ.Ea6Hpc165GVwhbWcCuMeNjTI8ZzP_98b977v4mM_Fdk",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"language\": \"English\",\n    \"level\":\"CLB9\"\n}"
+					"raw": "{\n    \"language\": \"French\",\n    \"level\":\"CLB7\"\n}"
 				},
 				"url": {
 					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/languages/",
@@ -376,6 +376,28 @@
 			"response": []
 		},
 		{
+			"name": "Languages Get by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/languages/user/610cae6a8c234f001516b1ff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"languages",
+						"user",
+						"610cae6a8c234f001516b1ff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Resumes Create",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
@@ -465,16 +487,40 @@
 					"raw": "{\n    \"id\": \"610b81d40768f900153841ee\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/resumes/",
-					"protocol": "http",
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/resumes/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"resumes",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projects Get by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mern-project-quad-squad-server.herokuapp.com/api/projects/user/610b78440768f900153841d8",
+					"protocol": "https",
+					"host": [
+						"mern-project-quad-squad-server",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"projects",
+						"user",
+						"610b78440768f900153841d8"
 					]
 				}
 			},

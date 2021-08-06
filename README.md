@@ -32,6 +32,8 @@ Request:
 Response
 ```javascript
 {
+    "userId": "610c28588b65f02adc231dbd",
+    "userEmail": "loc.dinh@mail.com",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4IiwibmFtZSI6IkxvYyBEaW5oIn0sImlhdCI6MTYyODE0MTYzNiwiZXhwIjoxNjI4MTc3NjM2fQ.28PezpDubuqrTb68M3GhN1dBr1jOXEFOycrQkhwaZbk"
 }
 ```
@@ -47,6 +49,8 @@ Request:
 ```
 ```javascript
 {
+    "userId": "610c28588b65f02adc231dbd",
+    "userEmail": "loc.dinh@mail.com",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEwYjc4NDQwNzY4ZjkwMDE1Mzg0MWQ4In0sImlhdCI6MTYyODE0MTkxMywiZXhwIjoxNjI4MTc3OTEzfQ.CQf5nBb09qqPgkXQQOLL92qE41a53GovdbfKGtYLBPM"
 }
 ```
@@ -129,6 +133,29 @@ Reponse:
     "description": "Group Project for Enterprise Application Modeling course - Update",
     "__v": 0
 }
+```
+**Get Projects by userId**
+GET: https://mern-project-quad-squad-server.herokuapp.com/api/projects/user/610b78440768f900153841d8
+
+Reponse:    
+
+```javascript
+[
+    {
+        "_id": "610b7a120768f900153841db",
+        "user": "610b78440768f900153841d8",
+        "name": "Enterprise Application Modeling - Update",
+        "description": "Group Project for Enterprise Application Modeling course - Update",
+        "__v": 0
+    },
+    {
+        "_id": "610b7ac20768f900153841dd",
+        "user": "610b78440768f900153841d8",
+        "name": "Enterprise Application Modeling - Update",
+        "description": "Group Project for Enterprise Application Modeling course - Update",
+        "__v": 0
+    }
+]
 ```
 **Delete Projects**
 DELETE: https://mern-project-quad-squad-server.herokuapp.com/api/projects/
@@ -219,6 +246,22 @@ Reponse:
     "level": "CLB8",
     "__v": 0
 }
+```
+**Get Language by userId**
+GET: https://mern-project-quad-squad-server.herokuapp.com/api/languages/user/610b78440768f900153841d8
+
+Reponse:    
+
+```javascript
+[
+    {
+        "_id": "610b7f920768f900153841e6",
+        "user": "610b78440768f900153841d8",
+        "language": "English",
+        "level": "CLB8",
+        "__v": 0
+    }
+]
 ```
 **Delete Language**
 DELETE: https://mern-project-quad-squad-server.herokuapp.com/api/projects/
