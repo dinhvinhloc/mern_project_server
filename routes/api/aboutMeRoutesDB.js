@@ -18,6 +18,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/aboutme/user/:userId
+//desc Get all aboutme by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const aboutmeDB = await Aboutme.find({
+      user: req.params.userId
+    });
+
+    if (!aboutmeDB) {
+      return res.status(404).send('About me info not found');
+    }
+    res.send(aboutmeDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
 //route Get api/todos/:id
 //desc Get  todos by id
 //access public

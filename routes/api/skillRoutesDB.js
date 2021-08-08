@@ -18,6 +18,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/skills/user/:userId
+//desc Get all skills by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const skillDB = await Skill.find({
+      user: req.params.userId
+    });
+
+    if (!skillDB) {
+      return res.status(404).send('Skill not found');
+    }
+    res.send(skillDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
 //route Get api/todos/:id
 //desc Get  todos by id
 //access public
