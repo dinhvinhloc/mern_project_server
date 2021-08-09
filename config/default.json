@@ -1,7 +1,5 @@
 {
     
     "mongoDBConnection" : "mongodb+srv://admin:admin@cluster-mern.is8nm.mongodb.net/mernapp?retryWrites=true&w=majority",
-
-    "mongoDBConnection_Subham" : "mongodb+srv://Subham04:Subham04@mernclasscluster.xq0o1.mongodb.net/educationapp?retryWrites=true&w=majority",
     "jwtsecret": "mysecret"
 }
