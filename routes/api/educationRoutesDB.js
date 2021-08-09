@@ -21,6 +21,23 @@ router.get('/', async (req, res) => {
 //route Get api/educations/:id
 //desc Get  education by id
 //access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const education = await Education.findById({
+      user: req.params.id
+    });
+    if (!education) {
+      return res.status(404).send('Education not found');
+    }
+    res.send(education);
+  } catch (err) {
+    res.status(500).send('server error');
+  }
+});
+
+//route Get api/educations/:id
+//desc Get  education by id
+//access public
 router.get('/:id', async (req, res) => {
   try {
     const education = await Education.findById(req.params.id);
@@ -42,8 +59,8 @@ router.post(
   [
     check('syear', 'Start Year is required').not().isEmpty(),
     check('eyear', 'End Year is required').not().isEmpty(),
-    check('iname', 'Start Year is required').not().isEmpty(),
-    check('cname', 'Start Year is required').not().isEmpty(),
+    check('iname', 'Institute Name is required').not().isEmpty(),
+    check('cname', 'Course Name is required').not().isEmpty(),
   ],
   async (req, res) => {
     try {
