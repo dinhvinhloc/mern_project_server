@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 router.get('/user/:userId', async (req, res) => {
   try {
     const education = await Education.findById({
-      user: req.params.id
+      user: req.params.userId
     });
     if (!education) {
       return res.status(404).send('Education not found');
