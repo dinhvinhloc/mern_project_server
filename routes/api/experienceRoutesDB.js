@@ -33,6 +33,22 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const experience = await Experience.find({
+      user: req.params.userId
+    });
+    if (!experience) {
+      return res.status(404).send('Experience not found');
+    }
+    res.send(experience);
+  } catch (err) {
+    res.status(500).send('server error');
+  }
+});
+
+
 //route post api/experience
 //desc insert experience
 //access public
