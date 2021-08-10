@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "6a2f3e68-2e85-4503-94e5-2722adc1e55d",
+		"name": "Subham",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Subham1\",\r\n    \"email\": \"subham@abcd.com\",\r\n    \"password\": \"12345678\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"subham@abcd.com\",\r\n    \"password\": \"12345678\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Experiences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Educations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/educations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"educations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Educations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"syear\": \"15-1-2019\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"iname\": \"laxmi institute\",\r\n        \"cname\": \"Computer Science\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/educations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"educations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Educations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6111f52487007d4358c0ce54\",\r\n        \"user\": \"6111f1e087007d4358c0ce4a\",\r\n        \"syear\": \"15-1-2020\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"iname\": \"Humber College1\",\r\n        \"cname\": \"ITS1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/educations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"educations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Experiences",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"6111f48987007d4358c0ce52\",\r\n        \"user\": \"6111f1e087007d4358c0ce4a\",\r\n        \"syear\": \"15-1-2019\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"cname\": \"Tcs1\",\r\n        \"position\": \"Web-Developer1\",\r\n        \"description\": \"Worked as Web-Developer1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Educations Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"syear\": \"15-1-2020\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"iname\": \"Humber College\",\r\n        \"cname\": \"ITS\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/educations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"educations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Experiences",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"syear\": \"15-1-2019\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"cname\": \"Tcs\",\r\n        \"position\" : \"Web-Developer\",\r\n        \"description\": \"Worked as Web-Developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Experiences",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\" : \"6111f55587007d4358c0ce57\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Educations",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\" : \"6111f3c287007d4358c0ce50\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/educations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"educations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Experiences Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjExMWYxZTA4NzAwN2Q0MzU4YzBjZTRhIiwibmFtZSI6InN1YmhhbUBhYmNkLmNvbSJ9LCJpYXQiOjE2Mjg1NjY0MTIsImV4cCI6MTYyODYwMjQxMn0.oWAUOt5KGgMVWzrCHkXrXubjXs4hY9IjYqAY_mUOxdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"syear\": \"15-1-2020\",\r\n        \"eyear\": \"15-1-2021\",\r\n        \"cname\": \"Infosys\",\r\n        \"position\" : \"Web-Developer\",\r\n        \"description\": \"Worked as Web-Developer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

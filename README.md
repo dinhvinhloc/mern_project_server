@@ -1,8 +1,7 @@
 ## Assignment name: Project Phase 2 Server
 
-=======
 
-## Name : Prabhjot Sidhu(N01390392), Loc Dinh (N01390804), Vlad Kostur (N01391574) Subham Tandel(N01391002)
+## Name : Prabhjot Sidhu(N01390392), Loc Dinh (N01390804), Vlad Kostur (N01391574), Subham Tandel(N01391002)
 
 ## Tasks: Create all the required rest API with authentication
 
@@ -15,6 +14,16 @@ endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/skills/
     - About Me
 pages : Aboutme.js, aboutMeRoutesDB.js 
 endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/aboutme/
+
+-  [x] Subham Tandel: 
+    - Educations
+pages : Education.js, educationRoutesDB.js
+endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/educations/ 
+    
+    
+    - Experiences
+pages : Experience.js, experiencesRoutesDB.js 
+endpoints : https://mern-project-quad-squad-server.herokuapp.com/api/experiences/
 
 -  [x] Loc Dinh: Project, Language, Resume, Heroku deploy for backend (sample: https://mern-project-quad-squad-server.herokuapp.com/api/languages/)
 ## User EndPoints
@@ -421,7 +430,7 @@ Reponse:
 "resume deleted"
 ```    
 -  [x] Vlad Kostur: Award, Contact, Hobby
--  [x] Subham Tandel: Education, Experience
+
 
 ## Learning Curve and challengers
 
