@@ -33,6 +33,25 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//route Get api/skills/user/:userId
+//desc Get all skills by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const resumeDB = await Resume.find({
+      user: req.params.userId
+    });
+
+    if (!resumeDB) {
+      return res.status(404).send('Resume not found');
+    }
+    res.send(resumeDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
 //route post api/resumes
 //desc insert todo
 //access public
