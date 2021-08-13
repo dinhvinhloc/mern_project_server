@@ -1,7 +1,7 @@
 const express = require('express');
 const { check, validationResult } = require('express-validator');
 let Resume = require('../../models/Resume');
-
+// let Skill = require('../../models/Skill');
 const auth = require('../../middleware/auth');
 
 const router = express.Router();
@@ -12,6 +12,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const resumeDB = await Resume.find();
+    
     res.send(resumeDB);
   } catch (err) {
     res.status(500).send('server error');
@@ -29,6 +30,44 @@ router.get('/:id', async (req, res) => {
     }
     res.send(resume);
   } catch (err) {
+    res.status(500).send('server error');
+  }
+});
+
+//route Get api/skills/user/:userId
+//desc Get all skills by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const resumeDB = await Resume.find({
+      user: req.params.userId
+    });
+   
+    if (!resumeDB) {
+      return res.status(404).send('Resume not found');
+    }
+    // resumeDB.forEach((resume) => {
+    //   // add skill info by id
+    //   let skillData = [];
+    //   if (resume.skills) {
+    //     resume.skills.forEach(async (skillId) => {
+    //       try {
+    //         const skillInfo = await Skill.findById(skillId);
+    //         if (skillInfo)  {
+    //           skillData.push(skillInfo);
+    //           console.log(skillInfo);
+    //         }
+    //       } catch (err) {
+    //         console.error('Skill id not found: '+skillId);
+    //       }
+    //     })
+    //   }
+    //   resume.skills = skillData;
+    // })
+    
+    res.send(resumeDB);
+  } catch (err) {
+    throw err
     res.status(500).send('server error');
   }
 });
