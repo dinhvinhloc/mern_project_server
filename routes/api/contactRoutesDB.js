@@ -18,6 +18,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/contacts/user/:userId
+//desc Get all contact by userid
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const contactDB = await Contact.find({
+      user: req.params.userId
+    });
+
+    if (!contactDB) {
+      return res.status(404).send('Contact info not found');
+    }
+    res.send(contactDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
 //route Get api/contacts/:id
 //desc Get  contact by id
 //access public
