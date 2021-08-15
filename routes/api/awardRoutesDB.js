@@ -18,6 +18,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/awards/user/:userId
+//desc Get all award by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const awardDB = await Award.find( {
+      user: req.params.userId
+    });
+
+    if (!awardDB) {
+      return res.status(404).send('Award not found');
+    }
+    res.send(awardDB);
+  } catch (err) {
+    throw err;
+    res.status(500).send('server error');
+  }
+});
+
 //route Get api/awards/:id
 //desc Get  award by id
 //access public

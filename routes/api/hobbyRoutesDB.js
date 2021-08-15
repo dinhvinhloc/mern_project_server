@@ -18,6 +18,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route Get api/hobbies/user/:userId
+//desc Get all hobby by userId
+//access public
+router.get('/user/:userId', async (req, res) => {
+  try {
+    const hobbyDB = await Hobby.find({
+      user: req.params.userId
+    });
+
+    if (!hobbyDB) {
+      return res.status(404).send('hobby info not found');
+    }
+    res.send(hobbyDB);
+  } catch (err) {
+    throw err
+    res.status(500).send('server error');
+  }
+});
+
 //route Get api/hobbies/:id
 //desc Get  hobby by id
 //access public
